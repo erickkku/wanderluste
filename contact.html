@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #5a7f72, #a1c4d9);
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        text-rendering: optimizeLegibility;
+        padding-top: 60px;
+      }
+
+      nav {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d1e7e1;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s, transform 0.3s ease, color 0.3s ease;
+      }
+
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(1.05);
+        color: #3e8e41;
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 450px;
+        width: 90%;
+        width: 600px;
+        margin-top: 20px;
+        transition: transform 0.3s;
+      }
+
+      .container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        color: #3e8e41;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #3e8e41;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        border: 2px solid #3e8e41;
+        border-radius: 5px;
+        font-size: 1rem;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button.submit-button {
+        background: linear-gradient(135deg, #3e8e41, #8fae6f);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      button.submit-button:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #2c6e2f, #4b8f57);
+      }
+
+      .extra-content {
+        width: 90%;
+        max-width: 1000px;
+        margin-top: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          
+          margin: 10px 0;
+        }
+      }
+      .container{
+        max-width: 85%;
+        padding: 34px;
+      }
+      .extra-content {
+        width: 90%;
+        max-width: 1000px;
+        margin-top: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="details.html">Travel packages</a></li>
+        <li><a href="register.html">Sign up</a></li>
+        <li><a href="login.html">Sign in</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+    <div class="extra-content">
+      <p>
+        "Our experience with Wanderlust was absolutely amazing! They took care
+        of every detail and made our vacation stress-free. Highly recommend!"
+        Jack D.
+      </p>
+      <p>
+        "I can’t thank Wanderlust enough for organizing such a memorable trip.
+        From the accommodations to the excursions, everything was perfect!"
+        Anonym
+      </p>
+    </div>
+  </body>
+</html>

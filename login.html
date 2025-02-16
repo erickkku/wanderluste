@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sign-In Page</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #d4a29c, #8e735b); 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      nav {
+        width: 100%;
+        background: #6b4f3f; 
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #f5e1c0; 
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        margin-top: 80px; 
+      }
+
+      .form-box {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        text-align: center;
+      }
+
+      .form-box h1 {
+        color: #6b4f3f; 
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #8e735b; 
+        font-size: 14px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #c4b19a; 
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .input-group input:focus {
+        outline: none;
+        border-color: #6b4f3f;
+      }
+
+      .btn {
+        background: #6b4f3f; 
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+        width: 100%;
+      }
+
+      .btn:hover {
+        background: #4f3b29; 
+      }
+
+      .btn a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-text {
+        margin-top: 20px;
+        color: #8e735b; 
+        font-size: 14px;
+      }
+
+      .footer-text a {
+        color: #6b4f3f; 
+        text-decoration: none;
+      }
+
+      .footer-text a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .form-box {
+          padding: 20px;
+        }
+
+        .form-box h1 {
+          font-size: 20px;
+        }
+
+        .btn {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="form-box">
+        <h1>Sign In</h1>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">
+            <a href="index.html">Sign In</a>
+          </button>
+        </form>
+        <p class="footer-text">
+          Don't have an account? <a href="register.html">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

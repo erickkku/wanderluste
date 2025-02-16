@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Packages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav {
+      background: #1d1007;
+      padding: 1.5rem 0;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f1f1f1;
+      padding: 0.5rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      background: #ff7b54;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    header {
+      background: url('bck1.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      z-index: 1;
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 10px 0;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background: #f4f4f4;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .feature-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      max-width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ff7b54;
+    }
+
+    .feature-item p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .destinations {
+      background: #141313;
+      padding: 40px 20px;
+    }
+
+    .destinations h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #3e2723;
+    }
+
+    .destination-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .destination-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .destination-card h3 {
+      font-size: 1.2rem;
+      margin: 10px;
+      color: #ff7b54;
+    }
+
+    .destination-card p {
+      font-size: 1rem;
+      margin: 10px;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c1b16;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #ff7b54;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-right: 44px;
+      }
+
+      nav a {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-item {
+        max-width: 90%;
+      }
+
+      .destination-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .destination-card {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="register.html">Sign up</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Travel Packages</h1>
+      <p>Explore our exclusive travel deals and embark on your dream adventure today.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="features">
+        <div class="feature-item">
+          <h3>All-Inclusive Trips</h3>
+          <p>Enjoy hassle-free travel with our all-inclusive packages, covering accommodation, meals, and guided tours.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Custom Itineraries</h3>
+          <p>Create a personalized travel experience with itineraries tailored to your preferences and schedule.</p>
+        </div>
+        <div class="feature-item">
+          <h3>24/7 Support</h3>
+          <p>Travel with peace of mind knowing our dedicated team is here to assist you anytime, anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <div class="container">
+      <h2>Our Popular Destinations</h2>
+      <div class="destination-cards">
+        <div class="destination-card">
+          <img src="destination.jpg" alt="Destination 1">
+          <h3>Paris, France</h3>
+          <p>Experience the romance and charm of the City of Lights with our exclusive packages.</p>
+        </div>
+        <div class="destination-card">
+          <img src="destination2.jpg" alt="Destination 2">
+          <h3>Bali, Indonesia</h3>
+          <p>Discover the serene beaches and vibrant culture of this tropical paradise.</p>
+        </div>
+        <div class="destination-card">
+          <img src="destination3.jpg" alt="Destination 3">
+          <h3>Kyoto, Japan</h3>
+          <p>Immerse yourself in the rich history and stunning landscapes of Kyoto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Wanderlust Travel Agency. All Rights Reserved.</p>
+    <p><a href="#top">Back to Top</a></p>
+  </footer>
+
+</body>
+</html>
